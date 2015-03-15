@@ -1,7 +1,7 @@
 package com.getjavajob.training.algo1503.halturina.lesson01;
 
 /**
- * Created by Cloud on 15.03.2015.
+ * Created by floud on 15.03.2015.
  */
 public class Task3_29 {
     public static void main(String[] args) {
