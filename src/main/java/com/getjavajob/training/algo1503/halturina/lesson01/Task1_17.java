@@ -18,7 +18,6 @@ public class Task1_17 {
         double result4 = Math.abs(x) + Math.abs(x + 1); //s
         System.out.println(result1 + " " + result2 + " " + result3 + " " + result4);
 
-
     }
 
 }
