@@ -7,9 +7,7 @@ import java.util.Scanner;
  */
 public class Task2_31 {
 
-    public static void main(String[] args) {
-        System.out.println(findInitialNumber());
-    }
+
     public static int findInitialNumber() {
         int a = new Scanner(System.in).nextInt();
         char[] chars = String.valueOf(a).toCharArray();

@@ -8,4 +8,7 @@ public class Task4_33 {
     public static boolean isLastEven(int a) {
         return a % 2 == 0 ? true : false;
     }
+    public static boolean isLastOdd(int a) {
+        return a % 2 != 0 ? true : false;
+    }
 }
