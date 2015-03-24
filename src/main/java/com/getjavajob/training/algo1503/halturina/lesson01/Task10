@@ -1,0 +1,3 @@
+1st step - (-1) casts to byte, no data loss;
+2nd step - byte -1 casts to char, but in Java char code-unit is unsigned number of 2^16 max, so the value is 65536 -1 = 65535
+3d step  - 65535 of unicode cast to int, which is 65535;
