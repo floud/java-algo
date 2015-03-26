@@ -1,7 +1,5 @@
 *.class
-
 *.iml
-
 .idea/
-
 out/
+testHome
