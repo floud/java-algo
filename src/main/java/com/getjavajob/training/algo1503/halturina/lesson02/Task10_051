@@ -1,0 +1,68 @@
+a)
+step
+
+1        procedure1(5):
+            print 5;
+2           procedure1(5 - 1):
+                print 4;
+3               procedure1(4 - 1):
+                    print 3;
+4                   procedure1(3 - 1):
+                        print 2;
+5                       procedure1(2 - 1);
+                            print 1;
+6                           procedure1 (1 - 1):
+                                end;
+                            end;
+                        end;
+                    end;
+                end;
+            end;
+
+b)
+step:
+
+1   procedure2(5):
+2       procedute2(5 - 1):
+3           procedure2(4 - 1):
+4               procedure2(3 - 1):
+5                   procedure2(2 - 1):
+6                       procedure(1 - 1):
+7                            end;
+                    print 1;
+                    end;
+                print 2;
+                end
+            print 3;
+            end;
+        print 4;
+        end;
+    print 5;
+    end;
+
+c)
+step:
+
+    procedure3(5):
+        print 5;
+        procedure(5 - 1):
+            print 4;
+            procedure3(4 - 1):
+                print 3;
+                procedure3(3 - 1):
+                    print 2;
+                    procedure3(2 - 1):
+                        print 1;
+                        procedure3(1 - 1):
+                            print 0;
+                            end;
+                        print 1;
+                        end;
+                    print 2;
+                    end;
+                print 3;
+                end;
+            print 4;
+            end;
+        print 5;
+        end;
