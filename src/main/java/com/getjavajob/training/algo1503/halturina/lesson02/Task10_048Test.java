@@ -7,7 +7,7 @@ import com.getjavajob.training.algo1503.halturina.util.Assert;
  */
 public class Task10_048Test {
     public static void main(String[] args) {
-        Task10_048.array = new int[]{3, 4, 102, 43, 64, 1, 4};
-        Assert.assertEquals(102, Task10_048.getMax(Task10_048.array.length));
+        int[] array = new int[]{3, 4, 102, 43, 64, 1, 4};
+        Assert.assertEquals(102, Task10_048.getMax(array, array.length));
     }
 }

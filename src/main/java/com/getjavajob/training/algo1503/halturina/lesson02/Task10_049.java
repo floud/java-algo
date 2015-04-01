@@ -1,16 +1,24 @@
 package com.getjavajob.training.algo1503.halturina.lesson02;
 
-import java.util.Arrays;
+import static com.getjavajob.training.algo1503.halturina.lesson02.Task10_048.*;
 
 /**
  * Created by halturin_a on 26.03.2015.
  */
 public class Task10_049 {
-    public static int[] array;
-    private static double max;
     private static int index;
 
-    /*public static double getIndex(int n) {
-
-    }*/
+    public static int getIndex(int[] array, int n) {
+        if (n == 0) {
+            return 0;
+        } else {
+            index = getIndex(array, n - 1);
+            if (array[index] > array[n - 1]) {
+                return index;
+            } else {
+                index = n - 1;
+                return index;
+            }
+        }
+    }
 }

@@ -3,7 +3,7 @@ package com.getjavajob.training.algo1503.halturina.lesson02;
 /**
  * Created by halturin_a on 24.03.2015.
  */
-public class Task10_42 {
+public class Task10_042 {
 
     public static double degree(double a, double n) {
         if (n < 0) {

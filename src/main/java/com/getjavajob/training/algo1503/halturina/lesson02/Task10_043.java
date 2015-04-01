@@ -3,7 +3,7 @@ package com.getjavajob.training.algo1503.halturina.lesson02;
 /**
  * Created by halturin_a on 24.03.2015.
  */
-public class Task10_43 {
+public class Task10_043 {
 
     public static int sumOfNumbers(int a) {
         int summ = 0;
@@ -21,7 +21,6 @@ public class Task10_43 {
         if (a <= 1) {
             return 0;
         }
-        //count++;
         count += countOfNumbers(a / 10);
         return ++count;
 

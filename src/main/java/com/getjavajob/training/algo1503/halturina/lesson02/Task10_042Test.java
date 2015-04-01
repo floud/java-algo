@@ -7,6 +7,6 @@ import com.getjavajob.training.algo1503.halturina.util.Assert;
  */
 public class Task10_042Test {
     public static void main(String[] args) {
-        Assert.assertEquals(0.25, Task10_42.degree(2, -2));
+        Assert.assertEquals(0.25, Task10_042.degree(2, -2));
     }
 }

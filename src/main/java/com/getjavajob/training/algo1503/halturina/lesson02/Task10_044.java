@@ -10,7 +10,7 @@ public class Task10_044 {
         if (String.valueOf(a).length() == 1) {
             return a;
         } else {
-            digitalR = digitalRoot(Task10_43.sumOfNumbers(a));
+            digitalR = digitalRoot(Task10_043.sumOfNumbers(a));
         }
         return digitalR;
     }

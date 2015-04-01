@@ -7,7 +7,7 @@ import com.getjavajob.training.algo1503.halturina.util.Assert;
  */
 public class Task10_049Test {
     public static void main(String[] args) {
-        Task10_049.array = new int[]{5, 32, 44, 3, -4};
-        //Assert.assertEquals(2, Task10_049.getIndex(Task10_049.array.length));
+        int[] array = new int[]{5, 32, 444, 3, -4};
+        Assert.assertEquals(2, Task10_049.getIndex(array, array.length));
     }
 }
