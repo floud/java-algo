@@ -1,0 +1,23 @@
+Addition/remove to/from the beginning test
+==============================
+DynamicArray.add(e): 9
+ArrayList.add(e): 73
+------------
+DynamicArray.remove(e): 3
+ArrayList.remove(e): 2
+==============================
+Addition/remove to/from the middle test
+==============================
+DynamicArray.add(e): 1
+ArrayList.add(e): 1
+------------
+DynamicArray.remove(e): 1
+ArrayList.remove(e): 1
+==============================
+Addition/remove to/from the end test
+==============================
+DynamicArray.add(e): 0
+ArrayList.add(e): 0
+------------
+DynamicArray.remove(e): 0
+ArrayList.remove(e): 0
