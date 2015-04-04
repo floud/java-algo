@@ -22,10 +22,10 @@ public class DynamicArrayPerformanceTest {
         System.out.println("Addition/remove to/from the beggining test");
         System.out.println("==============================");
         timer.start();
-        numberDynamicArray.add(0, new Integer(45));
+        numberDynamicArray.add(0, 45);
         System.out.println("DynamicArray.add(e): " + timer.getElapsedTime());
         timer.start();
-        numbers.add(0, new Integer(45));
+        numbers.add(0, 45);
         System.out.println("ArrayList.add(e): " + timer.getElapsedTime());
         System.out.println("------------");
         timer.start();
@@ -38,10 +38,10 @@ public class DynamicArrayPerformanceTest {
         System.out.println("Addition/remove to/from the middle test");
         System.out.println("==============================");
         timer.start();
-        numberDynamicArray.add(500000, new Integer(45));
+        numberDynamicArray.add(500000, 45);
         System.out.println("DynamicArray.add(e): " + timer.getElapsedTime());
         timer.start();
-        numbers.add(500000, new Integer(45));
+        numbers.add(500000, 45);
         System.out.println("ArrayList.add(e): " + timer.getElapsedTime());
         System.out.println("------------");
         timer.start();
@@ -54,10 +54,10 @@ public class DynamicArrayPerformanceTest {
         System.out.println("Addition/remove to/from the end test");
         System.out.println("==============================");
         timer.start();
-        numberDynamicArray.add(numberDynamicArray.size() - 1, new Integer(222));
+        numberDynamicArray.add(numberDynamicArray.size() - 1, 222);
         System.out.println("DynamicArray.add(e): " + timer.getElapsedTime());
         timer.start();
-        numbers.add(numbers.size() - 1, new Integer(222));
+        numbers.add(numbers.size() - 1, 222);
         System.out.println("ArrayList.add(e): " + timer.getElapsedTime());
         System.out.println("------------");
         timer.start();
