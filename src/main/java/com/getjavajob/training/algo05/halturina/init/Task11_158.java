@@ -11,8 +11,8 @@ public class Task11_158 {
             for (int j = i + 1; j < ints.length; j++) {
                 if (ints[i] == ints[j]) {
                     for (int k = j; k < ints.length; k++) {
-                        if (k == ints.length -1) break;
-                        ints[k] = ints[k+1];
+                        if (k == ints.length - 1) break;
+                        ints[k] = ints[k + 1];
                     }
                     ints[ints.length - 1] = 0;
                 }
