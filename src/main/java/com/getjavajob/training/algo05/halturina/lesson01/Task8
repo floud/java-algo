@@ -1,0 +1,3 @@
+Type extension doesn't result data loss on both negative and positive numbers.
+In case of negative numbers - binary representation of this number padding the left side with ones, the negative sign and the value of the original number are maintained.
+In case of positive numbers - binary representation of number padding left side with nulls, the positive sign and the value of original number are maintained too.

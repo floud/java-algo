@@ -1,0 +1,7 @@
+will next statements compile?
+
+1) byte b = 100 //yes;
+2) byte b  = 100L; // no, type cast
+byte b = (byte) 100L
+3) int i = 100L // no, type cast
+int i = (int) 100L;
