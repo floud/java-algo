@@ -7,11 +7,14 @@ import com.getjavajob.training.algo05.halturina.lesson03.GjjList;
  */
 public class DoublyLinkedList<E> implements GjjList<E> {
 
-    private E first;
-    private E last;
+    private Element<E> first;
+    private Element<E> last;
 
     @Override
     public int add(E e) {
+        if (first == null) {
+            first = (Element<E>) e;
+        }
         return 0;
     }
 
