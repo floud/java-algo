@@ -1,72 +1,72 @@
 package com.getjavajob.training.algo05.halturina.lesson04;
 
-
 import com.getjavajob.training.algo05.halturina.util.Timer;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
- * Created by floud on 06.04.2015.
+ * Created by halturin_a on 07.04.2015.
  */
-public class DoublyLinkedPerfomarmanceTest {
+public class JdkListsPerformanceTest {
     public static void main(String[] args) {
-        DoublyLinkedList<Number> doublyLinkedList = new DoublyLinkedList<>();
+        ArrayList<Number> arrayList = new ArrayList<>();
         for (int i = 0; i < 1000000; i++) {
-            doublyLinkedList.add(i);
+            arrayList.add(i);
         }
-        LinkedList<Number> numbers = new LinkedList<>();
+        LinkedList<Number> linkedList = new LinkedList<>();
         for (int i = 0; i < 1000000; i++) {
-            numbers.add(i);
+            linkedList.add(i);
         }
 
         Timer timer = new Timer();
         System.out.println("Addition/remove to/from the beggining test");
         System.out.println("==============================");
         timer.start();
-        doublyLinkedList.add(0, 45);
-        System.out.println("DoublyLinkedList.add(e): " + timer.getElapsedTime());
-        timer.start();
-        numbers.add(0, 45);
+        arrayList.add(0, 45);
         System.out.println("ArrayList.add(e): " + timer.getElapsedTime());
+        timer.start();
+        linkedList.add(0, 45);
+        System.out.println("LinkedList.add(e): " + timer.getElapsedTime());
         System.out.println("------------");
         timer.start();
-        doublyLinkedList.remove(0);
-        System.out.println("DoublyLinkedList.remove(e): " + timer.getElapsedTime());
-        timer.start();
-        numbers.remove(0);
+        arrayList.remove(0);
         System.out.println("ArrayList.remove(e): " + timer.getElapsedTime());
+        timer.start();
+        linkedList.remove(0);
+        System.out.println("LinkedList.remove(e): " + timer.getElapsedTime());
         System.out.println("==============================");
         System.out.println("Addition/remove to/from the middle test");
         System.out.println("==============================");
         timer.start();
-        doublyLinkedList.add(500000, 45);
+        arrayList.add(500000, 45);
         System.out.println("DoublyLinkedList.add(e): " + timer.getElapsedTime());
         timer.start();
-        numbers.add(500000, 45);
-        System.out.println("ArrayList.add(e): " + timer.getElapsedTime());
+        linkedList.add(500000, 45);
+        System.out.println("LinkedList.add(e): " + timer.getElapsedTime());
         System.out.println("------------");
         timer.start();
-        doublyLinkedList.remove(500000);
+        arrayList.remove(500000);
         System.out.println("DoublyLinkedList.remove(e): " + timer.getElapsedTime());
         timer.start();
-        numbers.remove(500000);
-        System.out.println("ArrayList.remove(e): " + timer.getElapsedTime());
+        linkedList.remove(500000);
+        System.out.println("LinkedList.remove(e): " + timer.getElapsedTime());
         System.out.println("==============================");
         System.out.println("Addition/remove to/from the end test");
         System.out.println("==============================");
         timer.start();
-        doublyLinkedList.add(doublyLinkedList.size() - 1, 222);
+        arrayList.add(arrayList.size() - 1, 222);
         System.out.println("DoublyLinkedList.add(e): " + timer.getElapsedTime());
         timer.start();
-        numbers.add(numbers.size() - 1, 222);
-        System.out.println("ArrayList.add(e): " + timer.getElapsedTime());
+        linkedList.add(linkedList.size() - 1, 222);
+        System.out.println("LinkedList.add(e): " + timer.getElapsedTime());
         System.out.println("------------");
         timer.start();
-        doublyLinkedList.remove(doublyLinkedList.size() - 1);
+        arrayList.remove(arrayList.size() - 1);
         System.out.println("DoublyLinkedList.remove(e): " + timer.getElapsedTime());
         timer.start();
-        numbers.remove(numbers.size() - 1);
-        System.out.println("ArrayList.remove(e): " + timer.getElapsedTime());
+        linkedList.remove(linkedList.size() - 1);
+        System.out.println("LinkedList.remove(e): " + timer.getElapsedTime());
     }
 }
