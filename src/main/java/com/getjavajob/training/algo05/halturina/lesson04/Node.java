@@ -11,7 +11,7 @@ public class Node<V> {
         this.val = val;
     }
 
-    public Node(V val, Node<V> next) {
+    public Node(Node<V> next, V val) {
         this.val = val;
         this.next = next;
     }

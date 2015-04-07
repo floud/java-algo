@@ -4,9 +4,9 @@ package com.getjavajob.training.algo05.halturina.lesson04;
  * Created by halturin_a on 06.04.2015.
  */
 public class Element<E> {
-    private Element<E> prev;
-    private Element<E> next;
-    private E val;
+    public Element<E> prev;
+    public Element<E> next;
+    public E val;
 
     public Element(E val) {
         this.val = val;

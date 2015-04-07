@@ -29,80 +29,78 @@ public class DoublyLinkedList<E> implements GjjList<E> {
         return size++;
     }
 
-    private Element iterate(int i) {
-        Element current;
-        if (i > (size() - 1) || i < 0) {
-            throw new IndexOutOfBoundsException("Index: " + i + " Max: " + (size() - 1) + " Min: 0");
-        } else if (i < size() / 2) {
-            current = first;
-            for (int j = 1; j <= i; j++) {
+    private Element<E> iterate(int i) {
+
+        if (i > (size - 1) || i < 0) {
+            throw new IndexOutOfBoundsException("Index: " + i + " Max: " + (size - 1) + " Min: 0");
+        } else if (i < size / 2) {
+            Element<E> current = first;
+            for (int j = 0; j < i; j++) {
                 current = current.getNext();
             }
+            return current;
         } else {
-            current = last;
-            for (int j = size() - 1; j > i; j--) {
+            Element<E> current = last;
+            for (int j = size - 1; j > i; j--) {
                 current = current.getPrev();
             }
+            return current;
         }
-        return current;
     }
 
     @Override
     public void add(int i, E e) {
-        Element element = new Element(e);
+        //Element<E> element = new Element<E>(e);
         if (i == size()) {
             add(e);
-        } else if (i == 0) {
+        } else insertElement(e, iterate(i)); /*if (i == 0) {
             element.setNext(first);
             first.setPrev(element);
             first = element;
         } else {
-            Element current = iterate(i);
+            Element<E> current = iterate(i);
             insertElement(element, current);
-        }
+        }*/
         size++;
     }
 
-    private void insertElement(Element<E> e, Element<E> current) {
-        current.getPrev().setNext(e);
+    private void insertElement(E e, Element<E> current) {
+        Element<E> previous = current.getPrev();
+        Element<E> inserted = new Element<E>(previous, current, e);
+        current.setPrev(inserted);
+        if (previous == null) {
+            first = inserted;
+        } else {
+            previous.setNext(inserted);
+        }
+        /*current.getPrev().setNext(e);
         e.setPrev(current.getPrev());
         e.setNext(current);
-        current.setPrev(e);
+        current.setPrev(e);*/
     }
 
     @Override
     public E get(int i) {
         Element<E> current = iterate(i);
-        /*if (i < size() / 2) {
-            current = first;
-            for (int j = 0; j <= i; j++) {
-                current = current.getNext();
-            }
-        } else {
-            current = last;
-            for (int j = size() - 1; j >= i; j--) {
-                current = current.getPrev();
-            }
-        }*/
         return current.getVal();
     }
 
     @Override
     public E remove(int i) {
-        Element current = iterate(i);
+        Element<E> current = iterate(i);
         removeElement(current);
         size--;
-        return (E) current.getVal();
+        return current.getVal();
     }
 
-    private Element removeFirst() {
-        Element current = first;
+    private Element<E> removeFirst() {
+        Element<E> current = first;
         first = current.getNext();
         first.setPrev(null);
         return current;
     }
 
-    private void removeElement(Element current) {
+    private void removeElement(Element<E> current) {
         if (current.equals(first)) {
             removeFirst();
         } else if (current.equals(last)) {
@@ -114,15 +112,15 @@ public class DoublyLinkedList<E> implements GjjList<E> {
         removeRefs(current);
     }
 
-    private Element removeLast() {
-        Element current = last;
+    private Element<E> removeLast() {
+        Element<E> current = last;
         last = current.getPrev();
         current.getPrev().setNext(null);
         removeRefs(current);
         return current;
     }
 
-    private void removeRefs(Element current) {
+    private void removeRefs(Element<E> current) {
         current.setPrev(null);
         current.setNext(null);
     }
@@ -165,14 +163,15 @@ public class DoublyLinkedList<E> implements GjjList<E> {
             if (current.equals(e)) {
                 return true;
             }
+            current = current.getNext();
         }
         return false;
     }
 
     @Override
     public void set(int i, E e) {
-        Element current = (Element) get(i);
-        Element element = (Element) e;
+        Element<E> current = iterate(i);
+        Element<E> element = new Element<E>(e);
         element.setNext(current.getNext());
         element.setPrev(current.getPrev());
         current.setNext(null);

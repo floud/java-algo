@@ -3,7 +3,6 @@ package com.getjavajob.training.algo05.halturina.lesson04;
 
 import com.getjavajob.training.algo05.halturina.util.Timer;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
 
 /**
@@ -28,14 +27,14 @@ public class DoublyLinkedPerfomarmanceTest {
         System.out.println("DoublyLinkedList.add(e): " + timer.getElapsedTime());
         timer.start();
         numbers.add(0, 45);
-        System.out.println("ArrayList.add(e): " + timer.getElapsedTime());
+        System.out.println("LinkedList.add(e): " + timer.getElapsedTime());
         System.out.println("------------");
         timer.start();
         doublyLinkedList.remove(0);
         System.out.println("DoublyLinkedList.remove(e): " + timer.getElapsedTime());
         timer.start();
         numbers.remove(0);
-        System.out.println("ArrayList.remove(e): " + timer.getElapsedTime());
+        System.out.println("LinkedList.remove(e): " + timer.getElapsedTime());
         System.out.println("==============================");
         System.out.println("Addition/remove to/from the middle test");
         System.out.println("==============================");
@@ -44,14 +43,14 @@ public class DoublyLinkedPerfomarmanceTest {
         System.out.println("DoublyLinkedList.add(e): " + timer.getElapsedTime());
         timer.start();
         numbers.add(500000, 45);
-        System.out.println("ArrayList.add(e): " + timer.getElapsedTime());
+        System.out.println("LinkedList.add(e): " + timer.getElapsedTime());
         System.out.println("------------");
         timer.start();
         doublyLinkedList.remove(500000);
         System.out.println("DoublyLinkedList.remove(e): " + timer.getElapsedTime());
         timer.start();
         numbers.remove(500000);
-        System.out.println("ArrayList.remove(e): " + timer.getElapsedTime());
+        System.out.println("LinkedList.remove(e): " + timer.getElapsedTime());
         System.out.println("==============================");
         System.out.println("Addition/remove to/from the end test");
         System.out.println("==============================");
@@ -60,13 +59,13 @@ public class DoublyLinkedPerfomarmanceTest {
         System.out.println("DoublyLinkedList.add(e): " + timer.getElapsedTime());
         timer.start();
         numbers.add(numbers.size() - 1, 222);
-        System.out.println("ArrayList.add(e): " + timer.getElapsedTime());
+        System.out.println("LinkedList.add(e): " + timer.getElapsedTime());
         System.out.println("------------");
         timer.start();
         doublyLinkedList.remove(doublyLinkedList.size() - 1);
         System.out.println("DoublyLinkedList.remove(e): " + timer.getElapsedTime());
         timer.start();
         numbers.remove(numbers.size() - 1);
-        System.out.println("ArrayList.remove(e): " + timer.getElapsedTime());
+        System.out.println("LinkedList.remove(e): " + timer.getElapsedTime());
     }
 }

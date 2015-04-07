@@ -2,7 +2,6 @@ package com.getjavajob.training.algo05.halturina.lesson04;
 
 import com.getjavajob.training.algo05.halturina.util.Timer;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.LinkedList;
 
@@ -41,14 +40,14 @@ public class JdkListsPerformanceTest {
         System.out.println("==============================");
         timer.start();
         arrayList.add(500000, 45);
-        System.out.println("DoublyLinkedList.add(e): " + timer.getElapsedTime());
+        System.out.println("ArrayList.add(e): " + timer.getElapsedTime());
         timer.start();
         linkedList.add(500000, 45);
         System.out.println("LinkedList.add(e): " + timer.getElapsedTime());
         System.out.println("------------");
         timer.start();
         arrayList.remove(500000);
-        System.out.println("DoublyLinkedList.remove(e): " + timer.getElapsedTime());
+        System.out.println("ArrayList.remove(e): " + timer.getElapsedTime());
         timer.start();
         linkedList.remove(500000);
         System.out.println("LinkedList.remove(e): " + timer.getElapsedTime());
@@ -57,14 +56,14 @@ public class JdkListsPerformanceTest {
         System.out.println("==============================");
         timer.start();
         arrayList.add(arrayList.size() - 1, 222);
-        System.out.println("DoublyLinkedList.add(e): " + timer.getElapsedTime());
+        System.out.println("ArrayList.add(e): " + timer.getElapsedTime());
         timer.start();
         linkedList.add(linkedList.size() - 1, 222);
         System.out.println("LinkedList.add(e): " + timer.getElapsedTime());
         System.out.println("------------");
         timer.start();
         arrayList.remove(arrayList.size() - 1);
-        System.out.println("DoublyLinkedList.remove(e): " + timer.getElapsedTime());
+        System.out.println("ArrayList.remove(e): " + timer.getElapsedTime());
         timer.start();
         linkedList.remove(linkedList.size() - 1);
         System.out.println("LinkedList.remove(e): " + timer.getElapsedTime());
